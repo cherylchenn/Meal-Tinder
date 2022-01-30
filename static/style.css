@@ -1,0 +1,133 @@
+/*navbar*/
+.topnav{
+  overflow: hidden;
+  background-color:#F9E79F;
+  position: fixed;
+  top:0;
+  width:100%;
+}
+
+/*container of navbar*/
+.topnav a{
+  font-family: garamond;
+  float: right;
+  display: block;
+  color:#196F3D;
+  text-align:center;
+  padding: 16px 20px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/*text in hover*/
+.topnav a:hover, .dropdown:hover, .dropbtn, .sidepanel a:hover, .openbtn:hover, .hero-text button:hover, input[type=submit]:hover, .confirm button:hover, button:hover{
+  background-color:#FEF9E7;
+  color: #D35400;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/* The sidepanel menu */
+.sidepanel {
+  height: 20%; /* Specify a height */
+  width: 0; /*width can be fixed in javascript file */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color:#F5B041;
+  overflow: hidden;
+  padding-top: 50px;
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+}
+
+/* The sidepanel links */
+.sidepanel a {
+  padding: 8px 8px 8px 10px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #196F3D;
+  display: block;
+  transition: 0.5s;
+  float:left;
+  cursor:pointer;
+}
+
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 34px;
+  color: #196F3D;
+}
+
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+  font-size: 32px;
+  cursor: pointer;
+  background-color: #F9E79F;
+  color:#196F3D;
+  padding: 6px 15px;
+  border: none;
+  font-family: garamond;
+}
+
+/* style the body */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: garamond;
+  overflow-x:hidden; /*hides horizontal scroll bar*/
+}
+
+/*style the text inside of the image*/
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+/*style the text in the button*/
+.hero-text button, .confirm button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #196F3D;
+  background-color: #F9E79F;
+  text-align: center;
+  cursor: pointer;
+  font-family:garamond;
+  font-size: 20px;
+}
+
+/*content inside the footer transparent block*/
+.footer {
+  position:absolute; /* Position the background text */
+  bottom: 0; /* Block will stay at the bottom of the image.top:0 can make it stick the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.25); /* Black background with 0.25 opacity */
+  color: #f1f1f1; 
+  width: 100%; 
+  padding: 10px; 
+  text-align: center;
+}
+
+/*standard syntax- keyframes basically changes CSS background but gradually, like an animation*/
+@keyframes fade{
+  from {opacity: 0.2;}
+  to {opacity: 1;}
+}
+
+/*confirmation page (and other little things that need this styling) */
+.confirm {
+  background-color: #FEF9E7;
+  color: #AF601A;
+  text-align:center;
+  font-size:25px;
+  padding-top:50px; 
+  height:100%;
+}

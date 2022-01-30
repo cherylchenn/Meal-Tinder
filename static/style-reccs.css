@@ -1,0 +1,205 @@
+/*style hero image*/
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("images/bg/image.jpg");
+  height: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/*The entire polaroid- picture + text*/
+/*polaroid on the left*/
+.polaroidleft {
+  width:35%;
+  background-color: #F9E79F;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+  float:left;
+  margin-left:150px;
+  margin-top:75px;
+  position:relative;
+}
+
+/*The bottom container containing the text*/
+.textcontainer {
+  text-align: center;
+  padding: 10px 20px;
+  font-family:garamond;
+  color:#7B241C;
+  font-size:20px;
+  font-weight:bold;
+}
+
+/*The overlay that goes over the polaroid images*/
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+  background-color: #196F3D;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*implement the overlay when user hovers over the image*/
+.polaroidleft:hover .overlay, .polaroidright:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+/*text inside overlay*/
+.overlaytext {
+  white-space: normal;
+  color:  #F9E79F;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*like button- heart button*/
+.like {
+  position:absolute;
+  right:-45%;
+  bottom:5%;
+  opacity: 0.5;
+  transition: 0.3s;
+  cursor:pointer;
+}
+
+/*dislike button- trash can button*/
+.dislike {
+  position:absolute;
+  left:5%;
+  bottom:5%;
+  opacity: 0.5;
+  transition: 0.3s;
+  cursor:pointer;
+}
+
+/*like/dislike hover buttons*/
+.like:hover, .dislike:hover{
+  opacity:1;
+  cursor:pointer;
+}
+
+/*this gives us the ids that would be the target*/
+/*as a result, ids with likemodal are the target; it won't respond to other id names*/
+[id^=likemodal] {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+[id^=likemodal]:target {
+  display: block;
+}
+
+/*this gives us the ids that would be the target*/
+/*as a result, ids with dislikemodal are the target; it won't respond to other id names*/
+[id^=dislikemodal] {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+[id^=dislikemodal]:target {
+  display: block;
+}
+
+/*the entire modal popup- overlay and the modal*/
+.popup {
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+}
+
+/*the overlay behind the modal*/
+.popupoverlay {
+  position: fixed;
+  z-index: 1;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: none;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4); 
+}
+
+/*the like modal */
+.popuplike {
+  position: fixed;
+  z-index: 9;
+  width: 50%;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  border-radius: 8px;
+  padding: 58px 32px 32px 32px;
+  color: #F9E79F;
+  background-color: #196F3D;
+  font-size:20px;
+  padding:20px;
+  text-align:center;
+}
+
+/*the dislike modal*/
+.popupdislike {
+  position: fixed;
+  z-index: 9;
+  width: 50%;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  border-radius: 8px;
+  padding: 58px 32px 32px 32px;
+  color: #F9E79F;
+  background-color: #C0392B;
+  font-size:20px;
+  padding:20px;
+  text-align:center;
+}
+
+/*close button in the modal*/
+.close {
+  position: absolute;
+  top: 16px;
+  right: 26px;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover{
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*confirm button in the modal*/
+input[type=submit] {
+  font-family: garammond;
+  color: #C0392B;
+  padding: 5px 5px;
+  border-radius: 4px;
+  background-color: #F9E79F;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  font-size: 15px;
+  width: 10%;
+}
+
+/*invisible form in the modal*/
+option, select {
+  visibility: hidden;
+}
