@@ -1,0 +1,74 @@
+{% extends "layout.html" %} 
+
+{% block title %}
+<title>Contact Us | Meal Tinder</title>
+{% endblock %} 
+{% block style %} 
+<link href= "static/style-contact.css" rel="stylesheet"/>
+{% endblock %} 
+
+{% block content %}
+<!---Declare hero image class and hero-text class inside of the image class #A93226-->
+<div class="hero-image">
+    <div class="hero-text">
+        <h1 style="font-size:110px; color:#A93226; font-family:garamond;">Contact Us</h1>
+        <p style="font-size:30px; color:#A93226; font-family:garamond;">Any questions? Feel free to contact us, we love to hear from you!</p>
+    </div>
+</div>
+
+<!-- put form inside background class for style-->
+<div class= "form">
+    <div class= "floatright">
+        <pre>
+            <p1>
+                ✉       info@meal-tinder.com 
+
+
+                ☏       123-456-7890 
+
+
+                📍       4 The Parkway, Ottawa, Ontario.
+            </p1>
+        </pre>
+        <hr style="margin-right:-70px; margin-top:30px; width:95%;">
+    </div>
+
+    <!--error message that shows up if prompted-->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="alert">
+            {{ messages[0] }}
+        </div>
+        {% endif %}
+    {% endwith %}
+    
+    <form action="/submit" method="post">
+        <!--prompts for user's full name-->
+        <label for="name">Full Name</label>
+        <br>
+        <input type="text" id="name" name="fullname" placeholder="Full name...">
+        <br>
+        
+        <!--prompts for user's email-->
+        <label for="email">Email Address</label>
+        <br>
+        <input type="text" id="email" name="emailaddress" placeholder="Email...">
+        <br>
+        
+        <!--prompts for user's message-->
+        <label for="msg">Please type your message.</label>
+        <br>
+        <input type="text" id="msg" name="message" placeholder="Message...">
+        <br>
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+<div class="footerbackground">
+    <!---footer block using content class to make it transparent-->
+    <div class="footer">
+        <p style="color:black;">Copyrights © Meal Tinder. All rights reserved.</p>
+    </div>
+</div>
+        
+{% endblock %}

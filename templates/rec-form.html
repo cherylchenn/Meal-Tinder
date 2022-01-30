@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html lang=eng>
+    <head>
+        <title>Recommendations | Meal Tinder</title>
+        <link href= "static/style.css" rel="stylesheet" type="text/css" />
+        <link href= "static/style-form.css" rel="stylesheet" type="text/css" />
+
+        <!---favicon- little icon image in the title page-->
+        <link rel="icon" type="image/x-icon" href="static/images/meal-logo.png">
+    </head>
+    <body>
+
+        <!---"form" class for style-->
+        <div class="form">
+            <h1>Welcome to the recommendations form!</h1>
+            <p><b>Please fill out each question on this form and click submit.</b></p>
+
+            <!--error message that shows up if prompted-->
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                <div class="alert">
+                    {{ messages[0] }}
+                </div>
+                {% endif %}
+            {% endwith %}
+
+            <form action="/submit_rec" method="post">
+
+                <!---question class styles the questions in the form-->
+                <div class="question">
+                    <p>1. Preferred Price: </p>
+                    <br>
+                    <p1>Lower price</p1><p1>No preference</p1>
+                </div>
+
+                <!---form options-->
+                <div>
+                    <label for="1">1</label>
+                    <input type="radio" id="price" name="price" value="1">
+
+                    <label for="2">2</label>
+                    <input type="radio" id="price" name="price" value="2">
+               
+                    <label for="3">3</label>
+                    <input type="radio" id="price" name="price" value="3">
+               
+                    <label for="3">4</label>
+                    <input type="radio" id="price" name="price" value="4">
+
+                    <label for="5">5</label>
+                    <input type="radio" id="price" name="price" value="5">
+                </div>
+
+                <!---line breaks for spacing-->
+                <br><br><br>
+
+                <!---question 2-->
+                <div class="question">
+                    <p>2. Preferred Portion Size: </p>
+                    <br>
+                    <p1>Small portion</p1><p1>Large portion</p1>
+                </div>
+                <div>
+                    <label for="1">1</label>
+                    <input type="radio" id="portion" name="portion" value="1">
+
+                    <label for="2">2</label>
+                    <input type="radio" id="portion" name="portion" value="2">
+             
+                    <label for="3">3</label>
+                    <input type="radio" id="portion" name="portion" value="3">
+                   
+                    <label for="4">4</label>
+                    <input type="radio" id="portion" name="portion" value="4">
+
+                    <label for="5">5</label>
+                    <input type="radio" id="portion" name="portion" value="5">
+                </div>
+
+                <br><br><br>
+                
+                <!--question 3-->
+                <div class="question">
+                    <p>3. Preferred Nutritional Value: </p>
+                    <br>
+                    <p1>No preference</p1><p1>Healthy</p1>
+                </div>
+                <div>
+                    <label for="1">1</label>
+                    <input type="radio" id="nutritional" name="nutritional" value="1">
+
+                    <label for="2">2</label>
+                    <input type="radio" id="nutritional" name="nutritional" value="2">
+               
+                    <label for="3">3</label>
+                    <input type="radio" id="nutritional" name="nutritional" value="3">
+
+                    <label for="4">4</label>
+                    <input type="radio" id="nutritional" name="nutritional" value="4">
+
+                    <label for="5">5</label>
+                    <input type="radio" id="nutritional" name="nutritional" value="5">
+                </div> 
+                
+                <br><br><br>
+
+                <input type="submit" value="Submit">
+
+            </form>
+
+        </div>
+    </body>
+</html>

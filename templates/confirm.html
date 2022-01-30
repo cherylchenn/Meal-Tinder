@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Thank you for your message!</title>
+        <link href="static/style.css" rel="stylesheet" type="text/css" />
+
+        <!---favicon- little icon image in the title page-->
+        <link rel="icon" type="image/x-icon" href="static/images/meal-logo.png">
+    </head>
+    <body>
+        <div class= "confirm">
+            <p>Thank you for your message. We will get back to you shortly.</p>
+            <a href="{{ url_for('main.contact') }}"> <!--will redirect user to contact us page if clicked-->
+                <button style= "width: 250px; height: 50px;">Return to Contact Us</button>
+            </a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,208 @@
+{% extends "layout.html" %}
+
+{% block title %} 
+<title>Menu | Meal Tinder</title>
+{% endblock %} 
+{% block style %}
+<link href="static/style-menu.css" rel="stylesheet"/>
+{% endblock %}
+
+{% block content %}
+<div class="header">
+    <h1>Alley Cafe Menu</h1>
+</div> 
+<div class="header2">
+
+    <!---the table-->
+    <table>
+        <!---tr stands for table row, this element describes the table row and what´s inside of it-->
+        <!---This is the first row-->
+        <tr>
+            <!---Since this is the first row, we´re styling the header of each column-->
+            <!---th stands for table head (i think)-->
+            <th style= "font-size:40px;">Drinks</th>
+            <th style= "font-size:40px; text-align:center;">Price (Tax Included)</th>
+        </tr>
+
+        <!---this is the second row-->
+        <tr>
+            <!---td stands for table data- the data inside the table-->
+            <td>Coca-Cola (500ml)</td>
+            <td style="text-align:center;">$2.50</td>
+        </tr>
+        <tr>
+            <td>Minute Maid (450ml)</td>
+            <td style="text-align:center;">$2.75</td>
+        </tr>
+        <tr>
+            <td>Dasani Water (591mL)</td>
+            <td style="text-align:center;">$2.25</td>
+        </tr>
+        <tr>
+            <td>Nestea (500mL)</td>
+            <td style="text-align:center;">$2.50</td>
+        </tr>
+        <tr>
+            <td>Powerade (591mL)</td>
+            <td style="text-align:center;">$2.50</td>
+        </tr>
+        <tr>
+            <td>Vitamin Water (591mL)</td>
+            <td style="text-align:center;">$3.00</td>
+        </tr>
+        <tr>
+            <td>Coffee</td>
+            <td style="text-align:center;">$2.00</td>
+        </tr>
+        <tr>
+            <td>Chocolate Milk</td>
+            <td style="text-align:center;">$2.50</td>
+        </tr>
+        <tr>
+            <td>Slushie (Small)</td>
+            <td style="text-align:center;">$2.00</td>
+        </tr>
+        <tr>
+            <td>Slushie (Medium)</td>
+            <td style="text-align:center;">$2.50</td>
+        </tr>
+        <tr>
+            <td>Slushie (Large)</td>
+            <td style="text-align:center;">$3.50</td>
+        </tr>
+        <tr>
+            <td>Various Canned Drinks (355mL)</td>
+            <td style="text-align:center;">$1.50</td>
+        </tr>
+    </table>
+</div>
+<div class="header2">
+    <table>
+        <tr>
+            <th style= "font-size:40px;">Snacks</th>
+            <th style= "font-size:40px; text-align: center;">Price (Tax Included)</th>
+        </tr>
+        <tr>
+            <td>Chips</td>
+            <td style="text-align:center;">$1.50</td>
+        </tr>
+        <tr>
+            <td>Chocolate Bar</td>
+            <td style="text-align:center;">$2.00</td>
+        </tr>
+        <tr>
+            <td>Pretzel</td>
+            <td style="text-align:center;">$5.00</td>
+        </tr>
+        <tr>
+            <td>Muffin</td>
+            <td style="text-align:center;">$2.50</td>
+        </tr>
+        <tr>
+            <td>Bagel</td>
+            <td style="text-align:center;">$2.50</td>
+        </tr>
+        <tr>
+            <td>Toast</td>
+            <td style="text-align:center;">$1.50</td>
+        </tr>
+        <tr>
+            <td>Haagen-Dazs Ice Cream- Vanilla Almonds</td>
+            <td style="text-align:center;">$3.00</td>
+        </tr>
+        <tr>
+            <td>Minute Maid Frozen Lemonade</td>
+            <td style="text-align:center;">$3.50</td>
+        </tr>
+    </table>
+</div>
+<div class="header2">
+    <table>
+        <tr>
+            <th style= "font-size:40px;">Food</th>
+            <th style= "font-size:40px; text-align: center;">Price (Tax Included)</th>
+        </tr>
+        <tr>
+            <td>Grilled Cheese</td>
+            <td style="text-align:center;">$3.00</td>
+        </tr>
+        <tr>
+            <td>Chicken Nuggets & Fries</td>
+            <td style="text-align:center;">$7.95</td>
+        </tr>
+        <tr>
+            <td>Onion Rings</td>
+            <td style="text-align:center;">$5.00</td>
+        </tr>
+        <tr>
+            <td>Nachos with Cheese</td>
+            <td style="text-align:center;">$5.00</td>
+        </tr>
+        <tr>
+            <td>Pogo</td>
+            <td style="text-align:center;">$3.00</td>
+        </tr>
+        <tr>
+            <td>French Fries</td>
+            <td style="text-align:center;">$5.00</td>
+        </tr>
+        <tr>
+            <td>Poutine</td>
+            <td style="text-align:center;">$6.00</td>
+        </tr>
+        <tr>
+            <td>Chicken Burger</td>
+            <td style="text-align:center;">$5.50</td>
+        </tr>
+        <tr>
+            <td>Hamburger</td>
+            <td style="text-align:center;">$5.50</td>
+        </tr>
+    </table>
+</div>
+<div class="header2">
+    <table>
+        <tr>
+            <th style= "font-size:40px;">Meal Combos</th>
+            <th style= "font-size:40px; text-align: center;">Price (Tax Included)</th>
+        </tr>
+        <tr>
+            <td>Combo 1- Hot dog and a participating 355mL beverage</td>
+            <td style="text-align:center;">$4.00</td>
+        </tr>
+        <tr>
+            <td>Combo 2- Slice of pizza and a participating 355mL beverage </td>
+            <td style="text-align:center;">$4.00</td>
+        </tr>
+        <tr>
+            <td>Combo 3- Fries and a participating 355mL beverage</td>
+            <td style="text-align:center;">$6.00</td>
+        </tr>
+        <tr>
+            <td>Combo 4- Poutine and a participating 355mL beverage</td>
+            <td style="text-align:center;">$7.00</td>
+        </tr>
+        <tr>
+            <td>Combo 5- Hamburger with Fries and a participating 355mL beverage</td>
+            <td style="text-align:center;">$8.50</td>
+        </tr>
+    </table>
+</div>   
+
+<!--doing hero image class but without an image :P-->
+<div class="hero-image">
+    <div class="hero-text">
+        <!---header-->
+        <h1 style="font-size:60px; font-family:garamond; margin-top: -10px;">Want Recommendations?</h1>
+
+        <!---link and button-->
+        <a href="{{ url_for('main.recommend') }}"> <!--redirects user to recommendations page if clicked-->
+            <button style= "width: 250px; height: 60px;">Get started!</button>
+        </a>
+    </div>
+    <!---footer block using content class to make it transparent-->
+    <div class="footer">
+        <p>Copyrights © Meal Tinder. All rights reserved.</p>
+    </div>
+</div>
+{% endblock %}

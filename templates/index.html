@@ -1,0 +1,49 @@
+{% extends "layout2.html" %} 
+
+{% block title %}
+<title>Meal Tinder</title>
+{% endblock %}
+{% block style %} 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+<link rel="stylesheet" href="static/style-index.css"/>
+{% endblock %} 
+
+{% block content %} 
+<!---Declare hero image class and hero-text class inside of the image class-->
+<div class="hero-image">
+    <div class="hero-text">
+        <h1 style="font-size:80px; font-family:garamond;">Welcome to Meal Tinder!</h1>
+        <p style="font-family:garamond; font-size:35px;">A program that <i>matches</i> you with meals.</p>
+    </div>
+</div>
+
+<!--our goal paragraph & logo-->
+<div class="header2">
+    <hr>
+    <img src="static/images/meal-logo.png" class="floatRight"> <!--the logo will show on the left side of the screen-->
+    <h2><b>Our Goal</b></h2> <!--the heading & paragraph will show on the right side of the screen-->
+    <p1>
+        The vision of Meal Tinder is to provide users with an easy-to-manipulate program,
+        which helps students decide on a meal to their liking.
+        During this pandemic, Meal Tinder also wishes to reduce physical contact between students who 
+        do not share the same social circle, by decreasing the amount of people in-store.
+    </p1>
+    <hr style= "margin-top:180px;">
+</div>
+
+<div class="btm-hero-image">
+    <div class="hero-text">
+        <h1 style="font-size:50px; font-family:garamond; margin-top: -10px;">Want to login or sign-up?</h1>
+        <a href="{{ url_for('auth.login') }}"> <!--will redirect user to login page if clicked--> 
+            <button style= "width: 200px; height: 60px;">Login</button>
+        </a>
+        <a href="{{ url_for('auth.signup') }}"> <!--will redirect user to signup page if clicked-->
+            <button style= "width: 200px; height: 60px;">Signup</button>
+        </a>
+    </div>
+    <!---footer block using content class to make it transparent--->
+    <div class="footer">
+        <p>Copyright © Meal Tinder. All rights reserved.</p>
+    </div>
+</div>
+{% endblock %}

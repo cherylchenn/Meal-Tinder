@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+<title>Home | Meal Tinder</title>
+{% endblock %}
+{% block style %}
+<link href= "static/style-main.css" rel="stylesheet"/>
+{% endblock %}
+
+{% block content %}
+<!---Declare hero image class and hero-text class inside of the image class-->
+<div class="hero-image">
+    <div class="hero-text">
+        <h1 style="font-size:100px; font-family:garamond;">Meal Tinder</h1>
+        <p style="font-family:garamond; font-size:35px;">For a fresh change, try Meal Tinder.</p>
+        <a href="{{ url_for('main.menu') }}"> <!--redirects user to menu page if clicked-->
+            <button style= "width: 200px; height: 50px;">Menu</button>
+        </a>
+    </div>
+</div>
+
+<!---about us header and paragraph-->
+<div class="header2">
+    <hr>
+    <h2>About us</h2>
+    <p1>We are Alanna Lu and Cheryl Chen, two Grade 12 students at Earl of March S.S. When deciding on a project theme, Alanna mentioned food delivery as a joke, 
+        but it managed to spark a brilliant thought in our minds: Meal Tinder, a program that lets you "match" with your meals.
+        We are hardworking #womeninSTEM, who have been developing this project for the past 4.5 months. We hope you appreciate this website
+        as much as we do. Without further ado, welcome to <b><i>Meal Tinder.</i></b></p1>
+    <hr style= "margin-top:150px;">
+</div>
+
+<!---hero image at the bottom with the recommendation button and footer-->
+<div class="hero-image">
+    <div class="hero-text">
+        <h1 style="font-size:70px; font-family:garamond; margin-top: -10px;">Want Recommendations?</h1>
+        <a href="{{ url_for('main.recommend') }}"> <!--redirects user to recommendations page if clicked-->
+            <button style= "width: 250px; height: 60px;">Click here to get started!</button>
+        </a>
+    </div>
+    <!---footer block using content class to make it transparent--->
+    <div class="footer">
+        <p>Copyrights © Meal Tinder. All rights reserved.</p>
+    </div>
+</div>
+{% endblock %}

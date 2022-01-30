@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<!--This layout is for the pages that can be accessed without logging in.-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--for files that ref this layout, this is where their page title would be-->
+    {% block title %}{% endblock %}
+    <link rel="stylesheet" href="static/style.css"/>
+    <!--for files that ref this layout, this is where additional stylesheets will be called-->
+    {% block style %}{% endblock %}
+    <link rel="icon" type="image/x-icon" href="static/images/meal-logo.png">
+</head>
+
+<body>
+    <!--for files that ref this layout, this is where their "unique" body content would be-->
+    {% block content %}{% endblock %}
+
+    <!--navigation bar for pages that do not require a login-->
+    <div class="topnav">
+        <!--if logged in, user can access the logout "page" and the home page (which will be able to bring user to other pages)-->
+        {% if current_user.is_authenticated %}
+        <a href="{{ url_for('auth.logout') }}">Logout</a> <!--logs user out-->
+        <a href="{{ url_for('main.home') }}">Home</a> <!--redirects user to main page-->
+        {% endif %}
+
+        <!--if not logged in, show the signup and login-->
+        {% if not current_user.is_authenticated %}
+        <a href="{{ url_for('auth.signup') }}">Signup</a> <!--redirects user to signup page-->
+        <a href="{{ url_for('auth.login') }}">Login</a> <!--redirects user to login page-->
+        {% endif %} 
+
+        <a href="{{ url_for('main.index') }}">Intro</a> <!--redirects user to index / intro / home page-->
+    </div>
+</body>
+
+</html>

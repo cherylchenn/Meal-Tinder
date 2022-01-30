@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<!--This layout is for the pages that can only be accessed after logged in.-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--in files that ref this layout, this is where the page title would be-->
+    {% block title %}{% endblock %} 
+    <link rel="stylesheet" href="static/style.css">
+    <!--in files that ref this layout, this is where other stylesheets would be called-->
+    {% block style %}{% endblock %}
+    <link rel="icon" type="image/x-icon" href="static/images/meal-logo.png">
+</head>
+
+<body>
+    <!--in files that ref this layout, this is where its "unique" body content would be-->
+    {% block content %}{% endblock %}
+    
+    <!---navigation bar for pages viewed after logging in--->
+    <div class="topnav">
+        <a href= "{{ url_for('main.profile') }}">Account</a> <!--redirects user to profile page-->
+        <a href= "{{ url_for('main.recommend') }}">Recommendations</a> <!--redirects user to recommendations page-->
+        <a href= "{{ url_for('main.favourite') }}">Favourites</a> <!--redirects user to favourites page-->
+        <a href= "{{ url_for('main.menu') }}">Menu</a> <!--redirects user to menu page-->
+        <a href= "{{ url_for('main.home') }}">Home</a> <!--redirects user to main page-->
+        
+        <!--side panel-->
+        <div id="mySidepanel" class="sidepanel">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="{{ url_for('main.edit') }}">Edit Profile</a> <!--redirects user to edit profile page-->
+            <a href= "{{ url_for('main.contact') }}">Contact Us</a> <!--redirects user to contact us page-->
+            <a href="{{ url_for('auth.logout') }}">Logout</a> <!--logs user out-->
+        </div>
+        
+        <button class="openbtn" onclick="openNav()">&#9776;</button>
+        <script>
+            // style.width is how much of the sidebar is shown
+            function openNav() {
+                document.getElementById("mySidepanel").style.width = "130px";
+            }
+
+            // how much of the sidebar will show when hidden
+            function closeNav() {
+                document.getElementById("mySidepanel").style.width = "0";
+            }
+        </script>
+    </div>
+
+</body>
+
+</html>

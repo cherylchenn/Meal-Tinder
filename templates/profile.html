@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %} 
+<title>Account | Meal Tinder</title>
+{% endblock %} 
+{% block style %} 
+<link href= "static/style-profile.css" rel="stylesheet"/>
+<link href="static/style.css" rel="stylesheet"/>
+{% endblock %} 
+
+{% block content %} 
+<!---header class-->
+<div class="header">
+    <h1 style="text-align: center;">Personal Profile</h1>
+
+    <!--displays name, username & email-->
+    <table>
+        <tr>
+            <td class="title">Name</td> 
+            <td class="key">{{ name }}</td>
+        </tr>
+        <tr>
+            <td class="title">Username</td>
+            <td class="key">{{ username }}</td>
+        </tr>
+        <tr>
+            <td class="title">Email</td>
+            <td class="key">{{ email }}</td>
+        </tr>
+    </table>
+    <!---Edit Profile button-->
+    <a href="{{ url_for('main.edit') }}"> <!--redirects user to edit profile page if clicked-->
+        <button style= "width: 250px; height: 60px; margin-top:50px; margin-bottom:100px;">Edit Profile</button>
+    </a>
+</div>
+
+<!---footerbackground class to provide a background image in order for the footer to work-->
+<div class="footerbackground">
+    <div class="footer">
+        <p>Copyrights © Meal Tinder. All rights reserved.</p>
+    </div>
+</div>
+{% endblock %} 

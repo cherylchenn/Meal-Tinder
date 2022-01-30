@@ -1,0 +1,46 @@
+{% extends "layout.html" %} 
+
+{% block title %} 
+<title>Profile | Meal Tinder</title>
+{% endblock %}
+{% block style %} 
+<link href= "static/style-edit.css" rel="stylesheet" />
+{% endblock %} 
+
+{% block content %}
+
+<!--header class-->
+<div class="header">
+    <h1 style="text-align:center;">Edit Profile</h1> 
+</div>
+
+<!--form-->
+<form action="/profedit", method="post">
+    <!---the input in the value will be what is shown on userinterface-->
+    <label for="name">Name:</label>
+    <br>
+    <input type="text" name="name" value={{ name }}>
+    <br>
+
+    <label for="user">Username:</label>
+    <br>
+    <input type="text" name="user" value={{ username }}>
+    <br>
+    
+    <label for="email">Email:</label>
+    <br>
+    <input type="text" name="email" value={{ email }}>
+    <br>
+
+    <input type="submit" value="Submit">
+</form>    
+
+<!--error message that shows up if prompted-->
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<div class="alert">
+    {{ messages[0] }}
+</div>
+{% endif %}
+{% endwith %}
+{% endblock %}
