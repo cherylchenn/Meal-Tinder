@@ -1,0 +1,60 @@
+/*style hero image*/
+.hero-image {
+  background-image: linear-gradient(rgba(97, 44, 44, 0.15), rgba(0, 0, 0, 0.15)), url("images/bg/orange-yellow-background.jpg");
+  height: 75%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* bottom hero image */
+.btm-hero-image {
+  background-image: linear-gradient(rgba(97, 44, 44, 0.15), rgba(0, 0, 0, 0.15)), url("images/bg/orange-yellow-background.jpg");
+  top: 80%;
+  height: 75%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* style the image to the right side of the page */
+.floatRight {
+  float: right;
+  margin-left: 20px;
+}
+
+/*paragraph describing the goal of our program*/
+p1 {
+  font-family: garamond;
+  font-size: 30px;
+  text-align: center;
+  color: #AF601A;
+}
+
+/*header of the paragraph describing our goal*/
+.header2 {
+  float: left;
+  background-color:#FEF9E7;
+  text-align: center;
+  color: #AF601A;
+  font-family:garamond;
+  padding: 20px 6px;
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-bottom: 20px;
+  font-size: 35px;
+}
+
+/* don't know why but removing this makes the footer disappear, even when index.html is using the general style.css sheet */
+.footer {
+  position: absolute; /* position the background text */
+  bottom: 0; /* block will stay at the bottom of the image.top:0 can make it stick the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.25); /* black background with 0.25 opacity */
+  color: #f1f1f1; 
+  width: 100%; 
+  padding: 10px; 
+  text-align: center;
+}

@@ -1,0 +1,59 @@
+/*header*/
+.header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url("images/bg/picture2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: white;
+  padding:70px;
+  font-size: 60px;
+}
+
+/*style table*/
+table {
+  font-family: garamond;
+  width: 70%;
+  border-collapse:collapse;
+  border: 1px solid black;
+  margin-left:170px;
+  color:#7B241C;
+  background-color:#FEF5E7;
+}
+  
+/*style texts inside the table*/
+table, th, td {
+  padding: 10px 20px;
+  text-align: center;
+}
+
+/*The title of the information inputted (e.g: username, name, email)*/
+.title {
+  font-size: 45px;
+}
+
+/*the value inside of the title (e.g: the name is Bob)*/
+.key {
+  font-size: 30px;
+}
+
+/*edit profile button under the table*/
+button{
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #196F3D;
+  background-color: #F9E79F;
+  text-align: center;
+  cursor: pointer;
+  font-size: 20px;
+  font-family:garamond;
+}
+
+/*background of the footer since our footer is transparent*/
+.footerbackground{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url("images/picture2.jpg");
+  background-size: cover;
+  position: relative;
+}

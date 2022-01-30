@@ -1,0 +1,58 @@
+/*change the background color since it's being stubborn*/
+body, html {
+    background-color:#FEF9E7;
+}
+
+/*the entire form*/
+.form {
+    text-align:center;
+    font-size: 25px;
+    color:#AF601A;
+    height:100%;
+    padding:50px 20px; 
+}
+
+
+/*style label- the numbers in the form beside the radio bullets (1, 2, 3, 4, 5)*/
+label {
+    padding:4px 5px;
+    font-size:20px;
+    padding-left:20px;
+    color:#196F3D;
+}
+
+/*style each form question*/
+.question {
+    padding:10px;
+    text-align:left;
+    padding-left:400px;
+    width:100%;
+}
+
+/*style the words above the bullets to indicate the values i.e: 1 is least applicable and 5 is most*/
+p1 {
+    font-size:20px;
+    padding:10px;
+    padding-right:260px;
+}
+
+/*submit button at the end of the form*/
+input[type=submit] {
+    padding: 14px 20px;
+    margin: 20px 0;
+    border-radius: 4px;
+    border:none;
+    display: inline-block;
+    color: #196F3D;
+    background-color: #F9E79F;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+    width: 200px; 
+    height: 50px;
+    font-family:garamond;
+}
+
+
+
+ 
