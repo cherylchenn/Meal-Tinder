@@ -1,4 +1,4 @@
-# meal-tinder
+# Meal Tinder
 All the code behind Meal Tinder: an ICS4U term project by Alanna &amp; Cheryl.
 
 For our ICS4U term project, we created a program that generates meal recommendations from our local canteen based on user preferences.
